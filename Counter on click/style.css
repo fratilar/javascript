@@ -1,0 +1,33 @@
+*{
+   margin: 0;
+   padding: 0;
+   font-family: 'Courier New', Courier, monospace;
+}
+
+.container{
+   background-color: #DDE765;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.container h1{
+   font-size: 50px;
+}
+.container span{
+   font-size: 100px;
+   font-weight: bold;
+}
+
+button{
+   background-color: transparent;
+   font-weight: bold;
+   padding: 5px 10px;
+   font-size: 1.2rem;
+   outline: none;
+   border: 2px solid black;
+   border-radius: 10px;
+   cursor: pointer;
+}

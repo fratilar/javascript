@@ -1,0 +1,89 @@
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+}
+.navbar{
+   background-color: black;
+   color: white;
+   position: fixed;
+   width: 100%;
+   z-index: 10;
+   transition: 0.5s ease-in;
+}
+.navbar.sticky{
+   background-color: white;
+   color: black;
+   padding: 1px 0;
+}
+.navigation{
+   width: 80%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 80px;
+}
+.navigation .logo{
+   font-size: 1.4em;
+   font-weight: 700;
+   text-transform: uppercase;
+}
+.navigation ul{
+   display: flex;
+   justify-content: space-between;
+   width: 300px;
+}
+.navigation ul li{
+   list-style-type: none;
+   font-weight: 800;
+   cursor: pointer;
+}
+.navigation ul li:hover{
+   color: blueviolet;
+}
+.hero{
+   position: relative;
+   top: 80px;
+   left:0;
+   width:100%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-image: url(./IMG_2414.JPG);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.overlay{
+   position: absolute;
+   top:0;
+   left:0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(to right,rgb(78, 76, 76),rgb(91, 131, 206));
+   mix-blend-mode: overlay;
+}
+.hero .content{
+   width: 80%;
+   margin: 0 auto;
+}
+.hero .content h1{
+   font-size: 100px;
+   color: #fff;
+   width: 500px;
+   line-height: 90px;
+   margin-bottom: 30px;
+}
+.hero .content p{
+   color: #fff;
+   font-size: 18px;
+   display: inline-block;
+   width: 500px;
+}
+.none{
+   height: 50vh;
+   background-color: coral;
+}
+

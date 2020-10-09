@@ -1,0 +1,89 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+section{
+   width: 100%;
+   height: 100vh;
+   background-image: url(./pexels-cowomen-2041627.jpg);
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   transition: 0.4s ease-in-out;
+}
+section.overlay{
+   background-color: rgba(34, 34, 34, 0.8);
+   background-blend-mode: overlay;
+}
+.box-model{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 400px;
+   height: 200px;
+   background-color: rgb(241, 241, 241);
+   box-shadow: 0 0 20px rgb(139, 153, 194);
+   border-radius: 10px;
+}
+.box-model h1{
+   font-size: 40px;
+   color: salmon;
+}
+.box-model .btn{
+   padding: 5px 10px;
+   text-transform: uppercase;
+   font-size: 16px;
+   font-weight: 600;
+   cursor: pointer;
+   margin-top: 20px;
+   border: 2px solid royalblue;
+   border-radius: 10px;
+   transition: 0.4s ease-in-out;
+   outline: none;
+}
+.box-model .btn:hover{
+   background-color: royalblue;
+   color: white;
+}
+.lightbox{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   width: 700px;
+   height: 500px;
+   background: #222;
+   box-shadow: 0 0 20px rgb(221, 219, 219);
+   transition: 0.4s ease-in;
+   visibility: hidden;
+   opacity: 0;
+   transform: scale(0);
+   border-radius: 10px;
+}
+.lightbox.show{
+   visibility: visible;
+   opacity: 1;
+   transform: scale(1);
+}
+.lightbox h2{
+   color: white;
+   font-size: 30px;
+}
+.close-btn{
+   position: absolute;
+   right: 10px;
+   top: 10px;
+   width: 30px;
+   height: 30px;
+   background: url(./close.png);
+   background-position: center;
+   background-size: cover;
+   cursor: pointer;
+   filter: invert(1);
+}

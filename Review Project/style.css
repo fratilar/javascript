@@ -1,0 +1,130 @@
+*{
+   margin:0;
+   padding:0;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   box-sizing: border-box;
+}
+.main{
+   background-color: #858585;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.title{
+   padding-bottom:20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.title h1{
+   color:white;
+   text-transform: capitalize;
+   letter-spacing: 2px;
+}
+.title .underline{
+   width: 50px;
+   height: 3px;
+   background-color:#01C0AF;
+   border-radius: 10px;
+   margin: 5px;
+}
+
+.review{
+   width: 700px;
+   height: min-content;
+   background-color: white;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.76);
+   padding: 20px;
+   border-radius: 10px;
+}
+.img-container{
+   width: 200px;
+   height: 200px;
+   margin: 0 0 10px 0;
+   position: relative;
+}
+.img-container img{
+   width:100%;
+   height: 100%;
+   border-radius: 50%;
+   z-index: 100;
+   position: relative;
+   object-fit: cover;
+   object-position: center;
+}
+.img-container::before{
+   content:"";
+   position: absolute;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
+   background-color: #01C0AF;
+   z-index: 10;
+   border-radius: 50%;
+   transform: translate(10px,-5px);
+}
+.img-container::after{
+   content: "\f10e";
+   font-family: "Font Awesome 5 Free";
+   font-weight: 900;
+   font-size: 20px;
+   width: 40px;
+   height: 40px;
+   background-color: #01C0AF;
+   color:white;
+   position: absolute;
+   top:20px;
+   left:0;
+   z-index: 100;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+}
+.review h4{
+   font-size: 28px;
+   text-transform: capitalize;
+}
+.review p:nth-of-type(1){
+   text-transform: uppercase;
+   color: #01C0AF;
+   font-weight: bold;
+}
+.review p:nth-of-type(2){
+   width:90%;
+   text-align: center;
+   padding: 10px 0;
+}
+.buttons{
+   padding: 10px;
+}
+.buttons button{
+   background-color: white;
+   color: #01C0AF;
+   outline: none;
+   border: none;
+   cursor: pointer;
+   font-size: 18px;
+   padding: 0 10px;
+}
+.random-btn{
+   padding: 5px 15px;
+   color: #01C0AF;
+   text-transform: uppercase;
+   font-weight: 600;
+   border-radius: 10px;
+   outline: none;
+   border: 2px solid rgba(0, 0, 0, 0.78);
+   cursor: pointer;
+}
+.random-btn:hover{
+   background-color: #01C0AF;
+   color: #fff;
+}

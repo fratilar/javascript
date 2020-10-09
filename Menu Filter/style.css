@@ -1,0 +1,84 @@
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.title{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 60px;
+}
+.title h1{
+   font-size: 2rem;
+   text-transform: capitalize;
+   padding-bottom: 3px;
+}
+.underline{
+   width:50px;
+   height: 3px;
+   background-color: darkgoldenrod;
+   text-align: center;
+}
+.btn-container{
+   text-align: center;
+   margin-top: 30px;
+}
+.btn-container .btn{
+   color: darkgoldenrod;
+   padding: 5px 8px;
+   background-color: white;
+   border: 1px solid darkgoldenrod;
+   border-radius: 5px;
+   outline: none;
+   margin: 0 5px;
+   font-weight: 600;
+   cursor: pointer;
+}
+.btn-container .btn.active{
+   background-color: darkgoldenrod;
+   color: #fff;
+}
+.btn-container .btn:hover{
+   background-color: darkgoldenrod;
+   color: #fff;
+}
+.grid-items{
+   width: 80%;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap: 50px;
+   padding: 60px 0;
+}
+.menu-item{
+   width: 100%;
+   display: flex;
+}
+.photo{
+   width: 250px;
+   height: 200px;
+   border: 3px solid darkgoldenrod;
+   border-radius: 10px;
+   object-fit: cover;
+   object-position: center;
+}
+.content{
+   padding: 0 20px;
+}
+.content .head{
+   display: flex;
+   justify-content: space-between;
+   padding-bottom: 5px;
+   border-bottom: 1px solid rgb(190, 190, 190);
+}
+.head .item-title{
+   text-transform: capitalize;
+}
+.price{
+   color: darkgoldenrod;
+}
+.content-info{
+   padding-top: 15px;
+}
