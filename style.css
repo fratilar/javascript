@@ -32,7 +32,6 @@ body{
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
-   align-items: center;
    border-radius: 10px;
    overflow: hidden;
    box-shadow: 0 0 10px rgb(128, 128, 128);
@@ -41,6 +40,7 @@ body{
 }
 .project-card:hover{
    transform: scale(1.02);
+   box-shadow: 0 0 15px rgb(128, 128, 128);
 }
 .project-card img{
    width: 100%;
