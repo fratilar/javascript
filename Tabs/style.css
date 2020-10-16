@@ -1,0 +1,158 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: cursive;
+}
+body{
+   background-color: #ccc;
+}
+.title{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 50px 0;
+}
+.title h1{
+   font-size: 3rem;
+}
+.title p{
+   text-align: center;
+   padding: 20px;
+   color: #777;
+   font-size: 18px;
+   font-weight: 600;
+}
+.about-section{
+   width: 70%;
+   margin: 0 auto;
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+}
+.about-img{
+   width: 50%;
+   height: 300px;
+}
+img{
+   width: 100%;
+   height: 100%;
+   object-position: center;
+   object-fit: cover;
+   border-radius: 5px;
+}
+.section-center{
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+}
+.about-btns{
+   width: 100%;
+   display: flex;
+   border-radius: 5px 5px 0 0;
+   overflow: hidden;
+   margin-left: 30px;
+}
+.btn{
+   font-size: 18px;
+   font-weight: 700;
+   width: 100%;
+   padding: 10px;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   transition: .3s ease-in;
+}
+.btn.active{
+   background-color: #fff;
+}
+.content{
+   background-color: #fff;
+   width: 100%;
+   height: fit-content;
+   margin-left: 30px;
+   padding: 20px;
+}
+.content h4{
+   margin-bottom: 10px;
+}
+.content p{
+   color: #777;
+   line-height: 25px;
+}
+.content{
+   display: none;
+}
+.content.active{
+   display: block;
+}
+
+/* media queries */
+@media (min-width:501px) and (max-width:770px){
+   .title{
+      padding: 30px 0;
+   }
+   .title h1 {
+      font-size: 2.5rem;
+   }
+   .title p {
+      font-size: 16px;
+      padding: 10px;
+      width: 60%;
+  }
+   .about-section{
+      width: 80%;
+      flex-direction: column;
+   }
+   .about-img {
+      width: 100%;
+      height: 250px;
+  }
+  .section-center {
+   width: 100%;
+   margin-top: 30px;
+   }
+   .about-btns {
+   margin-left: 0;
+   }
+   .content {
+      margin-left: 0;
+  }
+}
+@media (max-width:500px){
+   .title{
+      padding: 30px 0;
+   }
+   .title h1 {
+      font-size: 2.5rem;
+   }
+   .title p {
+      font-size: 16px;
+      padding: 10px;
+  }
+   .about-section{
+      width: 80%;
+      flex-direction: column;
+   }
+   .about-img {
+      width: 100%;
+      height: 170px;
+  }
+  .section-center {
+   width: 100%;
+   margin-top: 30px;
+   }
+   .about-btns {
+   margin-left: 0;
+   }
+   .content {
+      margin-left: 0;
+  }
+  .btn {
+   font-size: 13px;
+  }
+  .content p {
+   line-height: 20px;
+   }
+}

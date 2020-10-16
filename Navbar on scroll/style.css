@@ -2,6 +2,8 @@
    margin:0;
    padding:0;
    box-sizing: border-box;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   scroll-behavior: smooth;
 }
 .navbar{
    background-color: black;
@@ -9,17 +11,20 @@
    position: fixed;
    width: 100%;
    z-index: 10;
-   transition: 0.5s ease-in;
+   transition: 0.7s ease-out;
 }
 .navbar.sticky{
    background-color: white;
    color: black;
-   padding: 1px 0;
+}
+.navbar.sticky a{
+   color: black;
 }
 .navigation{
    width: 80%;
    margin: 0 auto;
    display: flex;
+   flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
    height: 80px;
@@ -29,41 +34,41 @@
    font-weight: 700;
    text-transform: uppercase;
 }
-.navigation ul{
+.navigation .toggle{
+   width: 30px;
+   height: 30px;
+   background-image: url(./menu.png);
+   background-position: center;
+   background-size: cover;
+   filter: invert(1);
+   cursor: pointer;
+   display:none;
+}
+.list{
    display: flex;
    justify-content: space-between;
-   width: 300px;
+   align-items: center;
 }
 .navigation ul li{
    list-style-type: none;
    font-weight: 800;
    cursor: pointer;
+   padding: 0 20px;
 }
-.navigation ul li:hover{
+.navigation ul li a{
+   color: #fff;
+   text-decoration: none;
+}
+.navigation ul li a:hover{
    color: blueviolet;
 }
 .hero{
-   position: relative;
-   top: 80px;
-   left:0;
-   width:100%;
-   height: 100vh;
+   width: 100%;
+   height: calc(100vh + 80px);
    display: flex;
    justify-content: center;
    align-items: center;
-   background-image: url(./IMG_2414.JPG);
-   background-position: center center;
-   background-repeat: no-repeat;
-   background-size: cover;
-}
-.overlay{
-   position: absolute;
-   top:0;
-   left:0;
-   width: 100%;
-   height: 100%;
-   background: linear-gradient(to right,rgb(78, 76, 76),rgb(91, 131, 206));
-   mix-blend-mode: overlay;
+   background: #000;
 }
 .hero .content{
    width: 80%;
@@ -73,7 +78,7 @@
    font-size: 100px;
    color: #fff;
    width: 500px;
-   line-height: 90px;
+   line-height: 110px;
    margin-bottom: 30px;
 }
 .hero .content p{
@@ -82,8 +87,133 @@
    display: inline-block;
    width: 500px;
 }
-.none{
-   height: 50vh;
-   background-color: coral;
+.about{
+   width: 100%;
+   height: 600px;
+   background-color: rgb(175, 131, 115);
+   color: white;
+   text-align: center;
+   font-weight: 700;
+   text-transform: uppercase;
 }
-
+.about span{
+   margin-left: 20px;
+   color: darkred;
+   font-weight:700;
+}
+.services{
+   width: 100%;
+   height: 600px;
+   background-color:#000;
+   color: white;
+   text-align: center;
+   font-weight: 700;
+   text-transform: uppercase;
+}
+.services span{
+   margin-left: 20px;
+   color: darkred;
+   font-weight:700;
+}
+.contact{
+   width: 100%;
+   height: 600px;
+   background-color: rgb(175, 131, 115);
+   color: white;
+   text-align: center;
+   font-weight: 700;
+   text-transform: uppercase;
+}
+.contact span{
+   margin-left: 20px;
+   color: darkred;
+   font-weight:700;
+}
+.projects{
+   width: 100%;
+   height: 600px;
+   background-color: #000;
+   color: white;
+   text-align: center;
+   font-weight: 700;
+   text-transform: uppercase;
+}
+.projects span{
+   margin-left: 20px;
+   color: darkred;
+   font-weight:700;
+}
+.footer{
+   width: 100%;
+   height: 80px;
+   background-color: rgb(175, 131, 115);
+   color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+h4{
+   font-size: 1.3rem;
+}
+h4 span{
+   color: darkred;
+   text-decoration: underline;
+}
+.btn-to-top{
+   position: fixed;
+   bottom: 30px;
+   right: 30px;
+   font-size: 25px;
+   outline: none;
+   border: none;
+   background-color: darkred;
+   color: #fff;
+   width: 40px;
+   height: 40px;
+   border-radius: 50px;
+   cursor: pointer;
+   display: none;
+}
+@media screen and (max-width:500px){
+   .navigation{
+      height: fit-content;
+      padding-top: 20px;
+   }
+   .navigation .toggle{
+      display: block;
+   }
+   .navigation .toggle.closed{
+      background-image: url(./close.png);
+      background-position: center;
+      background-size: cover;
+   }
+   .toggle.sticky{
+      filter: invert(0);
+   }
+   .list-container{
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      transition: all 0.4s linear;
+      height: 0;
+      overflow: hidden;
+   }
+   .list{
+      flex-direction: column;
+      align-items: flex-start;
+   }
+   .list-container.show-list{
+      height: 224px;
+   }
+   .navigation ul li{
+      padding: 10px 0;
+   }
+   .hero .content h1 {
+      font-size: 50px;
+      width: 100%;
+      line-height: 70px;
+  }
+  .hero .content p {
+   width: 100%;
+   }
+}

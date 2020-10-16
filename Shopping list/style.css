@@ -1,0 +1,120 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+   background-color: lightblue;
+   display: flex;
+   justify-content: center;
+}
+.section-center{
+   margin-top: 100px;
+   background-color: mintcream;
+   width: 550px;
+   min-height: fit-content;
+   padding: 20px;
+   text-align: center;
+   box-shadow: 0 0 15px #888;
+   border-radius: 10px;
+}
+.shopping-form{
+   width: 100%;
+   position: relative;
+}
+.alert{
+   font-weight: 600;
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+}
+.alert.red{
+   color: red;
+}
+.alert.green{
+   color: rgb(23, 207, 78);
+}
+.shopping-form h1{
+   padding-top: 30px;
+   padding-bottom: 15px;
+   color: rgb(23, 207, 78);
+   font-size: 35px;
+}
+.shopping-input{
+   display: flex;
+   padding: 10px;
+}
+.shopping-input input{
+   width: 75%;
+   outline: none;
+   border: none;
+   background-color: #ddd;
+   padding: 5px 10px;
+   border-radius: 10px 0 0 10px;
+}
+.shopping-input button{
+   width: 25%;
+   background-color: royalblue;
+   color: #fff;
+   outline: none;
+   border: none;
+   border-radius: 0 10px 10px 0;
+   cursor: pointer;
+}
+.shopping-items{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 5px 20px;
+}
+.check-container{
+   display: flex;
+   align-items: center;
+}
+.check-container input[type=checkbox]{
+   margin-right: 10px;
+   width: 16px;
+   height: 16px;
+   cursor: pointer;
+}
+.btn-container button{
+   background-color: transparent;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   font-size: 18px;
+   padding-left: 5px;
+}
+.btn-container button.edit-btn{
+   color: green;
+}
+.btn-container button.delete-btn{
+   color: red;
+}
+.check-container .item{
+   font-size: 17px;
+   font-weight: 900;
+}
+.clear-btn{
+   color: red;
+   background-color: transparent;
+   border: none;
+   outline: none;
+   text-transform: capitalize;
+   font-weight: 900;
+   border: 2px solid royalblue;
+   border-radius: 10px;
+   padding: 3px 10px;
+   margin-top: 20px;
+   cursor: pointer;
+}
+.shopping-container{
+   padding: 20px 0 15px;
+   transition: 0.3s ease-out;
+   visibility: hidden;
+}
+/* show container */
+.shopping-container.show-container{
+   visibility: visible;
+}
